@@ -1,0 +1,1 @@
+export default function NotFound(){return <main style={{padding:'10vh 24px',textAlign:'center',fontFamily:'system-ui'}}><h1>This shop is not available yet.</h1><p>The owner may still be setting it up.</p><a href="/">Back to Tarakki</a></main>;}

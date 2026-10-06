@@ -1,0 +1,3 @@
+import {sqliteTable,text,integer,index,uniqueIndex} from 'drizzle-orm/sqlite-core';
+export const workspaces=sqliteTable('workspaces',{owner:text('owner').primaryKey(),slug:text('slug'),payload:text('payload').notNull(),revision:integer('revision').notNull().default(0),updatedAt:text('updated_at').notNull()},t=>[uniqueIndex('idx_workspaces_slug').on(t.slug)]);
+export const images=sqliteTable('images',{id:text('id').primaryKey(),owner:text('owner').notNull(),mime:text('mime').notNull(),filename:text('filename').notNull(),createdAt:text('created_at').notNull()},t=>[index('idx_images_owner').on(t.owner)]);
